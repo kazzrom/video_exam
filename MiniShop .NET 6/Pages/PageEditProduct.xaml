@@ -1,0 +1,56 @@
+﻿<Page x:Class="MiniShop_.NET_6.Pages.PageEditProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MiniShop_.NET_6.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageEditProduct">
+
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="150"/>
+        </Style>
+        <Style TargetType="UniformGrid">
+            <Setter Property="Margin" Value="0 0 0 10"/>
+        </Style>
+    </Page.Resources>
+    <StackPanel 
+        Orientation="Vertical"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center">
+
+        <UniformGrid Columns="2">
+            <Label Content="Название товара:"/>
+            <TextBox x:Name="TxbNameProduct"/>
+        </UniformGrid>
+
+        <UniformGrid Columns="2">
+            <Label Content="Стоимость товара:"/>
+            <TextBox x:Name="TxbCostProduct"/>
+        </UniformGrid>
+
+        <UniformGrid Columns="2">
+            <Label 
+                Content="Описание товара:"
+                VerticalAlignment="Center"/>
+            <TextBox 
+                x:Name="TxbDescriptionProduct"
+                Height="100"
+                TextWrapping="Wrap"/>
+        </UniformGrid>
+
+        <UniformGrid Columns="2">
+            <Label Content="Изображение товара:"/>
+            <TextBox x:Name="TxbImageProduct"/>
+        </UniformGrid>
+
+        <Button
+            x:Name="BtnSaveProduct"
+            Click="BtnSaveProduct_Click"
+            Content="Сохранить"
+            Margin="0 10 0 0"
+            Padding="30 10"/>
+    </StackPanel>
+</Page>
